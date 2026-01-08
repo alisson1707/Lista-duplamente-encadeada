@@ -49,103 +49,118 @@ export class DoublyLinkedList<T> {
 
     public addAt(value: T, position: number): boolean {
         if (position < 0 || position > this.size) return false;
+
         if (position === 0) {
             this.addFirst(value);
             return true;
         }
+
         if (position === this.size) {
             this.addLast(value);
             return true;
         }
+
         let current = this.head!;
         for (let i = 0; i < position; i++) {
             current = current.next!;
         }
+
         const newNode = new Node(value);
         newNode.prev = current.prev;
         newNode.next = current;
+
         current.prev!.next = newNode;
         current.prev = newNode;
+
         this.size++;
         return true;
     }
 
     public removeFirst(): T | null {
         if (this.isEmpty()) return null;
+
         const value = this.head!.value;
+
         if (this.size === 1) {
             this.head = this.tail = null;
         } else {
             this.head = this.head!.next;
             this.head!.prev = null;
         }
+
         this.size--;
         return value;
     }
 
     public removeLast(): T | null {
         if (this.isEmpty()) return null;
+
         const value = this.tail!.value;
+
         if (this.size === 1) {
             this.head = this.tail = null;
         } else {
             this.tail = this.tail!.prev;
             this.tail!.next = null;
         }
+
         this.size--;
         return value;
     }
 
     public removeAt(position: number): T | null {
         if (this.isEmpty() || position < 0 || position >= this.size) return null;
+
         if (position === 0) return this.removeFirst();
         if (position === this.size - 1) return this.removeLast();
+
         let current = this.head!;
         for (let i = 0; i < position; i++) {
             current = current.next!;
         }
+
         current.prev!.next = current.next;
         current.next!.prev = current.prev;
+
         this.size--;
         return current.value;
     }
 
     public contains(value: T): boolean {
         let current = this.head;
+
         while (current !== null) {
             if (current.value === value) return true;
             current = current.next;
         }
+
         return false;
     }
 
     public printForward(): void {
         let current = this.head;
-        let output = "";
         while (current !== null) {
-            output += current.value + " ";
+            console.log(current.value);
             current = current.next;
         }
-        console.log(output.trim());
     }
 
     public printBackward(): void {
         let current = this.tail;
-        let output = "";
         while (current !== null) {
-            output += current.value + " ";
+            console.log(current.value);
             current = current.prev;
         }
-        console.log(output.trim());
     }
 
-    // Método público para obter valor na posição, seguindo o TDA (encapsulamento)
     public getAt(position: number): T | null {
         if (position < 0 || position >= this.size) return null;
+
         let current = this.head!;
         for (let i = 0; i < position; i++) {
             current = current.next!;
         }
+
         return current.value;
     }
 }

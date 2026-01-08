@@ -4,7 +4,7 @@
   "description": "Implementação de Lista Duplamente Encadeada",
   "type": "commonjs",
   "scripts": {
-    "start": "ts-node source/index.ts"
+    "start": "ts-node source/teste.ts"
   },
   "repository": {
     "type": "git",
