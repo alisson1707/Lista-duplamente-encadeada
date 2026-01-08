@@ -22,4 +22,10 @@ ou estruturas prontas.
 - Exibir do início ao fim
 - Exibir do fim ao início
 
-## ▶ Como Executar
+## Como Executar
+Antes de executar, instale as dependências do projeto:
+- npm install
+
+O script principal foi configurado no package.json utilizando o comando start.
+Para executar o código, utilize:
+- npm start
