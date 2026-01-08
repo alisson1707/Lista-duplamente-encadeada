@@ -1,10 +1,10 @@
 {
   "name": "lista-duplamente-encadeada",
   "version": "1.0.0",
-  "description": "Implementação de Lista Duplamente  Encadeada",
-  "source": "./source/index.html",
+  "description": "Implementação de Lista Duplamente Encadeada",
+  "type": "commonjs",
   "scripts": {
-    "start": "parcel source/index.html"
+    "start": "ts-node source/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/alisson1707/Lista-duplamente-encadeada#readme",
   "devDependencies": {
-    "parcel": "^2.16.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
