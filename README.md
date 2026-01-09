@@ -5,9 +5,7 @@
 - Álisson Ramires Sena da Silva
 
 ## Descrição
-Este projeto implementa um TDA de Lista Duplamente Encadeada em TypeScript,
-permitindo navegação do início ao fim e do fim ao início sem utilizar arrays
-ou estruturas prontas.
+Este projeto implementa um Tipo de Dado Abstrato (TDA) de Lista Duplamente Encadeada utilizando TypeScript. A estrutura permite a navegação bidirecional, ou seja, é possível percorrer os elementos da lista tanto do início para o fim quanto do fim para o início. A implementação não utiliza arrays nem outras estruturas prontas para simular a lista, respeitando os requisitos acadêmicos da atividade.
 
 ## Funcionalidades
 - Inserir no início
@@ -23,9 +21,12 @@ ou estruturas prontas.
 - Exibir do fim ao início
 
 ## Como Executar
-Antes de executar, instale as dependências do projeto:
+Antes de executar, certifique-se de ter o Node.js e instale as dependências do projeto:
 - npm install
 
 O script principal foi configurado no package.json utilizando o comando start.
 Para executar o código, utilize:
 - npm start
+
+Também é possível rodar diretamente o arquivo de teste com o comando:  
+- npx ts-node source/teste.ts

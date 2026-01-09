@@ -26,11 +26,14 @@ console.log("Remove da posição 1:", list.removeAt(1));
 console.log("\n=== Lista após remoções ===");
 list.printForward();
 
+console.log("\n=== Removendo último elemento restante ===");
+console.log("Remove último:", list.removeLast());
+
 console.log("\n=== Tentando remover da lista vazia ===");
-console.log("Remove primeiro:", list.removeFirst());   // null
-console.log("Remove último:", list.removeLast());      // null
-console.log("Remove da posição 0:", list.removeAt(0)); // null
-console.log("Remove da posição 1:", list.removeAt(1)); // null
+console.log("Remove primeiro (10):", list.removeFirst());   // null
+console.log("Remove último (30):", list.removeLast());      // null
+console.log("Remove da posição 0 (15):", list.removeAt(0)); // null
+console.log("Remove da posição 1 (20):", list.removeAt(1)); // null
 
 console.log("\n=== Estado final da lista ===");
 console.log("Tamanho da lista:", list.getSize());
